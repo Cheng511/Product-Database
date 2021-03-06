@@ -16,8 +16,8 @@ def Insert():
     time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     future = (datetime.datetime.now()+datetime.timedelta(days=14)
               ).strftime("%Y-%m-%d %H:%M")
-    conn = mariadb.connect(host="127.0.0.1", user="jc",
-                           password="0426", database="productDB")
+    conn = mariadb.connect(host="127.0.0.1", user="USER_NAME",
+                           password="PASSWORDS", database="DATABASE_NAME")
     cursor = conn.cursor()
     insert = """insert into product (品名 , 網站, 借入時間, 預計歸還時間)
                    values (%s, %s, %s, %s )"""
