@@ -36,8 +36,8 @@ def Return():
     # 對應產品名稱後，將輸入時間更新到資料庫中該產品的實際歸還時間
     name = p_name.get()
     time = actual_time.get()
-    conn = mariadb.connect(host="127.0.0.1", user="jc",
-                           password="0426", database="productDB")
+    conn = mariadb.connect(host="127.0.0.1", user="USER_NAME",
+                           password="PASSWORDS", database="DATABASE_NAME")
     cursor = conn.cursor()
     update_return = """update product set 實際歸還時間 = '""" + \
         time + "'"""" where 品名 =  '""" + name + "'"
@@ -56,8 +56,8 @@ def Launch():
     # 對應產品名，將現在時間更新到資料庫中該產品的上刊時間
     name = p_name.get()
     time = real_launch_time.get()
-    conn = mariadb.connect(host="127.0.0.1", user="jc",
-                           password="0426", database="productDB")
+    conn = mariadb.connect(host="127.0.0.1", user="USER_NAME",
+                           password="PASSWORDS", database="DATABASE_NAME")
     cursor = conn.cursor()
     update_return = """update product set 上刊時間 = '""" + \
         time + "'"""" where 品名 =  '""" + name + "'"

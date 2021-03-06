@@ -4,13 +4,15 @@ from pwDB import UseDataBase
 import datetime
 import tkinter as tk
 
+# I've used terminal to create MariaDB database table, you can create your own.
+
 
 def InsertProduct(name, web, time_in, time_out):
     dbconfig = {
         "host": "127.0.0.1",
-        "user": "jc",
-        "password": "0426",
-        "database": "productDB",
+        "user": "USER_NAME",
+        "password": "PASSWORDS",
+        "database": "DATABASE_NAME",
     }
     try:
         with UseDataBase(dbconfig) as cursor:
@@ -24,9 +26,9 @@ def InsertProduct(name, web, time_in, time_out):
 def InsertReturn(name, time):
     dbconfig = {
         "host": "127.0.0.1",
-        "user": "jc",
-        "password": "0426",
-        "database": "productDB",
+        "user": "USER_NAME",
+        "password": "PASSWORDS",
+        "database": "DATABASE_NAME",
     }
     try:
         with UseDataBase(dbconfig) as cursor:
@@ -40,9 +42,9 @@ def InsertReturn(name, time):
 def InsertLaunch(name, time):
     dbconfig = {
         "host": "127.0.0.1",
-        "user": "jc",
-        "password": "0426",
-        "database": "productDB",
+        "user": "USER_NAME",
+        "password": "PASSWORDS",
+        "database": "DATABASE_NAME",
     }
     try:
         with UseDataBase(dbconfig) as cursor:
